@@ -16,16 +16,16 @@ window.onload = function () {
       timer.innerText = timerValue
       timerStorato = sessionStorage.setItem("timer", timerValue)
       sessionStorage.setItem("timer", timerValue)
-      if (timerValue % 2 === 0) {
+      if (timerValue % 2 !== 0) {
         body.classList.remove("bg-black")
         body.classList.add("bg-white")
-        body.classList.remove("text-white")
-        body.classList.add("text-black")
+        timer.classList.remove("text-white")
+        timer.classList.add("text-black")
       } else {
         body.classList.remove("bg-white")
         body.classList.add("bg-black")
-        body.classList.remove("text-black")
-        body.classList.add("text-white")
+        timer.classList.remove("text-black")
+        timer.classList.add("text-white")
       }
     }
   }, 1000)
